@@ -19,3 +19,10 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+
+#-----------------------Rules for keeping the model classes--------------------
+# Keep all classes in the package and subpackages
+-keep class com.nnaroju.newsapp.domain.model.** { *; }
+
+-keep class com.nnaroju.newsapp.data.remote.** { *; }

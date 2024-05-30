@@ -156,4 +156,10 @@ dependencies {
 
     //material extended icons
     implementation(libs.material.icons)
+
+    //mockito
+    testImplementation(libs.mockito.core)
+    androidTestImplementation(libs.mockito.android)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.mockito.inline)
 }

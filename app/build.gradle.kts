@@ -78,10 +78,10 @@ android {
         }
 
         val unitTests = "test${variant}UnitTest"
-        //val androidTests = "connected${variant}AndroidTest"
+        val androidTests = "connected${variant}AndroidTest"
 
         tasks.register<JacocoReport>("Jacoco${variant}CodeCoverage") {
-            dependsOn(listOf(unitTests/*, androidTests*/))
+            dependsOn(listOf(unitTests, androidTests))
             group = "Reporting"
             description = "Execute ui and unit tests, generate and combine Jacoco coverage report"
             reports {
@@ -122,6 +122,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    debugImplementation(libs.androidx.monitor)
 
     //splash screen
     implementation(libs.androidx.core.splashscreen)
@@ -162,4 +163,5 @@ dependencies {
     androidTestImplementation(libs.mockito.android)
     testImplementation(libs.mockito.kotlin)
     testImplementation(libs.mockito.inline)
+
 }

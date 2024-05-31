@@ -13,6 +13,7 @@ composeBom = "2023.08.00"
 dagger = "2.51"
 hilt-compose = "1.0.0"
 ksp-version = "1.9.0-1.0.13"
+monitor = "1.6.1"
 navigation = "2.7.4"
 retrofit = "2.11.0"
 coil = "2.6.0"
@@ -26,6 +27,7 @@ mockito-kotlin = "4.0.0"
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+androidx-monitor = { module = "androidx.test:monitor", version.ref = "monitor" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

@@ -5,13 +5,16 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="ButtonKtTest">
+      <SelectionState runConfigName="EmptyScreenPreview">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="OnboardingScreenKtTest">
+      <SelectionState runConfigName="testEmptyScreenWithErrorMessageNullDisplaysYouHaveNotSavedText()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="testOnboardingFlow()">
+      <SelectionState runConfigName="testEmptyScreenWithErrorMessageNullDisplaysServerUnavailableText()">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="EmptyScreenKtTest">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

@@ -138,7 +138,7 @@ private fun ArticleCardPreview() {
                 "Author",
                 "content",
                 "description",
-                "published at",
+                "2024-07-01T15:17:57Z",
                 Source(id = "1", "name"),
                 "title", "url", "imageurl"
             ),

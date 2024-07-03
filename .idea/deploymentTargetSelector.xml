@@ -5,16 +5,16 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="EmptyScreenPreview">
+      <SelectionState runConfigName="testArticlesListWithEmptyArticlesDisplaysEmptyScreen()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="testEmptyScreenWithErrorMessageNullDisplaysYouHaveNotSavedText()">
+      <SelectionState runConfigName="testArticlesListWithArticlesDisplaysArticleCards()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="testEmptyScreenWithErrorMessageNullDisplaysServerUnavailableText()">
+      <SelectionState runConfigName="ArticleCardPreview">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="EmptyScreenKtTest">
+      <SelectionState runConfigName="testArticlesListWithPagingArticlesDisplaysArticleCards()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

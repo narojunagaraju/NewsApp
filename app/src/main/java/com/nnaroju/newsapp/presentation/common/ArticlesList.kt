@@ -1,6 +1,5 @@
 package com.nnaroju.newsapp.presentation.common
 
-import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -84,8 +83,7 @@ fun handlePagingResult(
         }
 
         error != null -> {
-            Log.e("TAG", "handlePagingResult: $error")
-            EmptyScreen(modifier = Modifier.fillMaxSize())
+            EmptyScreen(error = error, modifier = Modifier.fillMaxSize())
             false
         }
 

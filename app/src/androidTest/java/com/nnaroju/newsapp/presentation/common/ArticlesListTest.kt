@@ -60,11 +60,33 @@ class ArticlesListTest {
             )
         )
         composeRule.setContent {
-            val articles: LazyPagingItems<Article> = rememberLazyPagingItems(articles)
-            ArticlesList(articles = articles, onClick = {} )
+            val articles: LazyPagingItems<Article> = rememberLazyPagingItems(articles, false)
+            ArticlesList(articles = articles, onClick = {})
         }
 
         composeRule.onNodeWithText("title").assertIsDisplayed()
+    }
+
+    @Test
+    fun testArticlesListWithEmptyPagingArticlesDisplaysEmptyScreen() {
+        val articles = emptyList<Article>()
+        composeRule.setContent {
+            val articles: LazyPagingItems<Article> = rememberLazyPagingItems(articles, false)
+            ArticlesList(articles = articles, onClick = {})
+        }
+
+        composeRule.onNodeWithText("You haven't saved news so far!").assertIsDisplayed()
+    }
+
+    @Test
+    fun testArticlesListWithPagingErrorDisplaysEmptyScreenWithUnknownError() {
+        val articles = emptyList<Article>()
+        composeRule.setContent {
+            val articles: LazyPagingItems<Article> = rememberLazyPagingItems(articles, true)
+            ArticlesList(articles = articles, onClick = {})
+        }
+        Thread.sleep(10*1000)
+        composeRule.onNodeWithText("Unknown error").assertIsDisplayed()
     }
 
 }

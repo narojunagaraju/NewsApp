@@ -5,16 +5,16 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="testArticlesListWithEmptyArticlesDisplaysEmptyScreen()">
+      <SelectionState runConfigName="testArticlesListWithPagingErrorDisplaysEmptyScreenWithUnknownError()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="testArticlesListWithArticlesDisplaysArticleCards()">
+      <SelectionState runConfigName="SearchBarKtTest">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="ArticleCardPreview">
+      <SelectionState runConfigName="testSearchBarWithEmptyTextPlaceHolderTextIsDisplayed()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="testArticlesListWithPagingArticlesDisplaysArticleCards()">
+      <SelectionState runConfigName="testSearchBarWithSearchClickTriggersTheOnSearch()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

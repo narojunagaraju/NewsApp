@@ -1,6 +1,5 @@
 package com.nnaroju.newsapp.presentation.common
 
-import android.content.res.Configuration
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -34,10 +33,10 @@ import com.nnaroju.newsapp.ui.theme.NewsAppTheme
 fun SearchBar(
     text: String,
     readOnly: Boolean,
-    onClick: (() -> Unit)? = null,
     onValueChange: (String) -> Unit,
     onSearch: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onClick: (() -> Unit)? = null
 ) {
     val interactionSource = remember {
         MutableInteractionSource()

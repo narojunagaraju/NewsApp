@@ -28,14 +28,25 @@ jobs:
       - name: Build and run unit tests
         run: ./gradlew build test
 
-      - name: Set up emulator
+      - name: Install Android Emulator dependencies
+        run: sudo apt-get install -yq libgl1-mesa-dev qemu-kvm
+
+      - name: Start Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
           target: default
           arch: x86_64
           profile: Nexus 6
-          script: ./gradlew connectedAndroidTest
+          emulator-options: "-no-snapshot-load"
+
+      - name: Wait for Android Emulator to fully boot
+        run: |
+          adb wait-for-device shell getprop sys.boot_completed | grep -m 1 '1'
+          sleep 30  # Extra wait time to ensure the emulator is ready
+
+      - name: Run instrumentation tests
+        run: ./gradlew connectedAndroidTest
 
       - name: Generate combined Jacoco report
         run: ./gradlew JacocoDebugCodeCoverage
@@ -45,4 +56,3 @@ jobs:
         with:
           name: jacoco-report
           path: build/reports/jacoco/JacocoDebugCodeCoverage/html
-

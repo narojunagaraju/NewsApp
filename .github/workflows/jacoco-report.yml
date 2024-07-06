@@ -25,8 +25,20 @@ jobs:
             sudo udevadm control --reload-rules
             sudo udevadm trigger --name-match=kvm
 
-      - name: run tests
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Set up emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
-            api-level: 29
-            script: ./gradlew connectedCheck
+          api-level: 29
+          script: ./gradlew JacocoDebugCodeCoverage
+
+      - name: Upload Jacoco report
+        uses: actions/upload-artifact@v2
+        with:
+          name: jacoco-report
+          path: build/reports/jacoco/JacocoDebugCodeCoverage/html

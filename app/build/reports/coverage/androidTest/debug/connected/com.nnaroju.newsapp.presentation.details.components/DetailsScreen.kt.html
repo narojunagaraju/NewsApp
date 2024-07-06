@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DetailsScreen.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=0;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">debug</a> &gt; <a href="index.source.html" class="el_package">com.nnaroju.newsapp.presentation.details.components</a> &gt; <span class="el_source">DetailsScreen.kt</span></div><h1>DetailsScreen.kt</h1><pre class="source lang-java linenums">package com.nnaroju.newsapp.presentation.details.components
+
+import android.content.Intent
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
+import android.net.Uri
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
+import com.nnaroju.newsapp.domain.model.Article
+import com.nnaroju.newsapp.domain.model.Source
+import com.nnaroju.newsapp.ui.theme.NewsAppTheme
+
+@Composable
+fun DetailsScreen(
+    article: Article,
+    event: (DetailsEvent) -&gt; Unit,
+    navigateUp: () -&gt; Unit,
+<span class="nc bnc" id="L32" title="All 2 branches missed.">    modifier: Modifier = Modifier</span>
+<span class="nc bnc" id="L33" title="All 30 branches missed.">) {</span>
+<span class="nc" id="L34">    val context = LocalContext.current</span>
+
+<span class="nc" id="L36">    Column(</span>
+        modifier = modifier
+    ) {
+<span class="nc" id="L39">        DetailsTopBar(</span>
+            onBrowsingClick = {
+<span class="nc" id="L41">                Intent(Intent.ACTION_VIEW).also {</span>
+<span class="nc" id="L42">                    it.data = Uri.parse(article.url)</span>
+<span class="nc bnc" id="L43" title="All 2 branches missed.">                    if (it.resolveActivity(context.packageManager) != null) {</span>
+<span class="nc" id="L44">                        context.startActivity(it)</span>
+                    }
+<span class="nc" id="L46">                }</span>
+<span class="nc" id="L47">            },</span>
+            onShareClick = {
+<span class="nc" id="L49">                Intent(Intent.ACTION_SEND).also {</span>
+<span class="nc" id="L50">                    it.putExtra(Intent.EXTRA_TEXT, article.url)</span>
+<span class="nc" id="L51">                    it.type = &quot;text/plain&quot;</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">                    if (it.resolveActivity(context.packageManager) != null) {</span>
+<span class="nc" id="L53">                        context.startActivity(it)</span>
+                    }
+<span class="nc" id="L55">                }</span>
+<span class="nc" id="L56">            },</span>
+<span class="nc" id="L57">            onBookmarkClick = { event(DetailsEvent.UpsertDeleteArticle(article)) },</span>
+<span class="nc" id="L58">            onBackClick = navigateUp</span>
+        )
+
+<span class="nc" id="L61">        LazyColumn(</span>
+<span class="nc" id="L62">            modifier = Modifier.fillMaxWidth(),</span>
+<span class="nc" id="L63">            contentPadding = PaddingValues(</span>
+<span class="nc" id="L64">                start = 24.dp,</span>
+<span class="nc" id="L65">                end = 24.dp,</span>
+<span class="nc" id="L66">                top = 24.dp</span>
+            )
+        ) {
+<span class="nc" id="L69">            item {</span>
+<span class="nc bnc" id="L70" title="All 6 branches missed.">                AsyncImage(</span>
+<span class="nc" id="L71">                    model = ImageRequest.Builder(context).data(article.urlToImage).build(),</span>
+<span class="nc" id="L72">                    contentDescription = null,</span>
+<span class="nc" id="L73">                    modifier = Modifier</span>
+<span class="nc" id="L74">                        .fillMaxWidth()</span>
+<span class="nc" id="L75">                        .height(248.dp)</span>
+<span class="nc" id="L76">                        .clip(MaterialTheme.shapes.medium),</span>
+<span class="nc" id="L77">                    contentScale = ContentScale.Crop</span>
+                )
+
+<span class="nc" id="L80">                Spacer(modifier = Modifier.height(24.dp))</span>
+
+<span class="nc" id="L82">                Text(</span>
+<span class="nc" id="L83">                    text = article.title,</span>
+<span class="nc" id="L84">                    style = MaterialTheme.typography.displaySmall,</span>
+<span class="nc" id="L85">                    color = MaterialTheme.colorScheme.onBackground</span>
+                )
+
+<span class="nc bnc" id="L88" title="All 2 branches missed.">                Text(</span>
+<span class="nc" id="L89">                    text = article.content,</span>
+<span class="nc" id="L90">                    style = MaterialTheme.typography.bodyMedium,</span>
+<span class="nc" id="L91">                    color = MaterialTheme.colorScheme.onBackground</span>
+<span class="nc" id="L92">                )</span>
+<span class="nc" id="L93">            }</span>
+<span class="nc" id="L94">        }</span>
+<span class="nc" id="L95">    }</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">}</span>
+
+
+@Preview(showBackground = true)
+@Preview(uiMode = UI_MODE_NIGHT_YES)
+@Composable
+<span class="nc bnc" id="L102" title="All 6 branches missed.">private fun DetailsScreenPreview() {</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">    NewsAppTheme {</span>
+<span class="nc bnc" id="L104" title="All 8 branches missed.">        DetailsScreen(article = Article(</span>
+<span class="nc" id="L105">            author = &quot;&quot;,</span>
+<span class="nc" id="L106">            title = &quot;Coinbase says Apple blocked its last app release on NFTs in Wallet ... - CryptoSaurus&quot;,</span>
+<span class="nc" id="L107">            description = &quot;Coinbase says Apple blocked its last app release on NFTs in Wallet ... - CryptoSaurus&quot;,</span>
+<span class="nc" id="L108">            content = &quot;We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to unde… [+1131 chars]&quot;,</span>
+<span class="nc" id="L109">            publishedAt = &quot;2023-06-16T22:24:33Z&quot;,</span>
+<span class="nc" id="L110">            source = Source(</span>
+<span class="nc" id="L111">                id = &quot;&quot;, name = &quot;bbc&quot;</span>
+            ),
+<span class="nc" id="L113">            url = &quot;https://consent.google.com/ml?continue=https://news.google.com/rss/articles/CBMiaWh0dHBzOi8vY3J5cHRvc2F1cnVzLnRlY2gvY29pbmJhc2Utc2F5cy1hcHBsZS1ibG9ja2VkLWl0cy1sYXN0LWFwcC1yZWxlYXNlLW9uLW5mdHMtaW4td2FsbGV0LXJldXRlcnMtY29tL9IBAA?oc%3D5&amp;gl=FR&amp;hl=en-US&amp;cm=2&amp;pc=n&amp;src=1&quot;,</span>
+<span class="nc" id="L114">            urlToImage = &quot;https://media.wired.com/photos/6495d5e893ba5cd8bbdc95af/191:100/w_1280,c_limit/The-EU-Rules-Phone-Batteries-Must-Be-Replaceable-Gear-2BE6PRN.jpg&quot;</span>
+<span class="nc" id="L115">        ), event = {}, navigateUp = { /*TODO*/ })</span>
+<span class="nc" id="L116">    }</span>
+<span class="nc bnc" id="L117" title="All 2 branches missed.">}</span>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span>Generated by the Android Gradle plugin 8.4.0</div></body></html>

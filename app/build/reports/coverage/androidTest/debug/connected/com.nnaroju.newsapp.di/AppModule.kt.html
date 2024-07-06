@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AppModule.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=0;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">debug</a> &gt; <a href="index.source.html" class="el_package">com.nnaroju.newsapp.di</a> &gt; <span class="el_source">AppModule.kt</span></div><h1>AppModule.kt</h1><pre class="source lang-java linenums">package com.nnaroju.newsapp.di
+
+import android.app.Application
+import androidx.room.Room
+import com.nnaroju.newsapp.data.local.NewsDao
+import com.nnaroju.newsapp.data.local.NewsDatabase
+import com.nnaroju.newsapp.data.local.NewsTypeConverter
+import com.nnaroju.newsapp.data.manager.LocalUserManagerImpl
+import com.nnaroju.newsapp.data.remote.NewsApi
+import com.nnaroju.newsapp.data.repository.NewsRepositoryImpl
+import com.nnaroju.newsapp.domain.manager.LocalUserManager
+import com.nnaroju.newsapp.domain.respository.NewsRepository
+import com.nnaroju.newsapp.domain.usecases.app_entry.AppEntryUseCases
+import com.nnaroju.newsapp.domain.usecases.app_entry.ReadAppEntry
+import com.nnaroju.newsapp.domain.usecases.app_entry.SaveAppEntry
+import com.nnaroju.newsapp.domain.usecases.news.DeleteArticleUseCase
+import com.nnaroju.newsapp.domain.usecases.news.GetNewsUseCase
+import com.nnaroju.newsapp.domain.usecases.news.NewsUseCases
+import com.nnaroju.newsapp.domain.usecases.news.SearchNewsUseCase
+import com.nnaroju.newsapp.domain.usecases.news.SelectArticleUseCase
+import com.nnaroju.newsapp.domain.usecases.news.SelectArticlesUseCase
+import com.nnaroju.newsapp.domain.usecases.news.UpsertArticleUseCase
+import com.nnaroju.newsapp.utils.Constants
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Singleton
+
+@Module
+@InstallIn(SingletonComponent::class)
+object AppModule {
+
+    @Provides
+    @Singleton
+    fun provideLocalUserManager(
+        application: Application
+<span class="nc" id="L40">    ): LocalUserManager = LocalUserManagerImpl(application)</span>
+
+    @Provides
+    @Singleton
+<span class="nc" id="L44">    fun provideAppEntryUseCases(localUserManager: LocalUserManager) = AppEntryUseCases(</span>
+<span class="nc" id="L45">        readAppEntry = ReadAppEntry(localUserManager),</span>
+<span class="nc" id="L46">        saveAppEntry = SaveAppEntry(localUserManager)</span>
+<span class="nc" id="L47">    )</span>
+
+    @Provides
+    @Singleton
+    fun provideNewsApi(): NewsApi {
+<span class="nc" id="L52">        return Retrofit.Builder()</span>
+<span class="nc" id="L53">            .baseUrl(Constants.BASE_URL)</span>
+<span class="nc" id="L54">            .addConverterFactory(GsonConverterFactory.create())</span>
+<span class="nc" id="L55">            .build()</span>
+<span class="nc" id="L56">            .create(NewsApi::class.java)</span>
+    }
+
+    @Provides
+    @Singleton
+    fun provideNewsRepository(newsApi: NewsApi): NewsRepository =
+<span class="nc" id="L62">        NewsRepositoryImpl(newsApi = newsApi)</span>
+
+    @Provides
+    @Singleton
+    fun providesNewsUsesCases(
+        newsRepository: NewsRepository,
+        newsDao: NewsDao
+    ): NewsUseCases {
+<span class="nc" id="L70">        return NewsUseCases(</span>
+<span class="nc" id="L71">            getNews = GetNewsUseCase(newsRepository),</span>
+<span class="nc" id="L72">            searchNews = SearchNewsUseCase(newsRepository),</span>
+<span class="nc" id="L73">            upsertArticleUseCase = UpsertArticleUseCase(newsDao),</span>
+<span class="nc" id="L74">            deleteArticleUseCase = DeleteArticleUseCase(newsDao),</span>
+<span class="nc" id="L75">            selectArticlesUseCase = SelectArticlesUseCase(newsDao),</span>
+<span class="nc" id="L76">            selectArticleUseCase = SelectArticleUseCase(newsDao)</span>
+        )
+    }
+
+    @Provides
+    @Singleton
+    fun providesNewsDatabase(
+        application: Application
+    ): NewsDatabase {
+<span class="nc" id="L85">        return Room.databaseBuilder(</span>
+<span class="nc" id="L86">            context = application,</span>
+            klass = NewsDatabase::class.java,
+<span class="nc" id="L88">            name = Constants.DATABASE_NAME</span>
+        )
+<span class="nc" id="L90">            .addTypeConverter(NewsTypeConverter())</span>
+<span class="nc" id="L91">            .fallbackToDestructiveMigration()</span>
+<span class="nc" id="L92">            .build()</span>
+    }
+
+    @Provides
+    @Singleton
+    fun providesNewsDao(newsDatabase: NewsDatabase): NewsDao {
+<span class="nc" id="L98">        return newsDatabase.newsDao</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span>Generated by the Android Gradle plugin 8.4.0</div></body></html>

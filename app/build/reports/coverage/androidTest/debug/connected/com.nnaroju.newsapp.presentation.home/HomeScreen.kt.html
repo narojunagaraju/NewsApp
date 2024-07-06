@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HomeScreen.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=0;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">debug</a> &gt; <a href="index.source.html" class="el_package">com.nnaroju.newsapp.presentation.home</a> &gt; <span class="el_source">HomeScreen.kt</span></div><h1>HomeScreen.kt</h1><pre class="source lang-java linenums">package com.nnaroju.newsapp.presentation.home
+
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.basicMarquee
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.Icons
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.paging.compose.LazyPagingItems
+import com.nnaroju.newsapp.R
+import com.nnaroju.newsapp.domain.model.Article
+import com.nnaroju.newsapp.presentation.common.ArticlesList
+import com.nnaroju.newsapp.presentation.common.SearchBar
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+fun HomeScreen(
+    articles: LazyPagingItems&lt;Article&gt;,
+    navigateToSearch: () -&gt; Unit,
+    navigateToDetails: (Article) -&gt; Unit,
+<span class="nc bnc" id="L39" title="All 2 branches missed.">    modifier: Modifier = Modifier</span>
+<span class="nc bnc" id="L40" title="All 30 branches missed.">) {</span>
+<span class="nc" id="L41">    val title by remember {</span>
+<span class="nc" id="L42">        derivedStateOf {</span>
+<span class="nc bnc" id="L43" title="All 2 branches missed.">            if (articles.itemCount &gt; 10) {</span>
+<span class="nc" id="L44">                articles.itemSnapshotList.items.slice(</span>
+<span class="nc" id="L45">                    IntRange(start = 0, endInclusive = 9)</span>
+<span class="nc" id="L46">                ).joinToString(separator = &quot; \uD83D\uDFE5 &quot;) { it.title }</span>
+            } else {
+<span class="nc" id="L48">                &quot;&quot;</span>
+            }
+        }
+    }
+
+<span class="nc" id="L53">    Column(</span>
+        modifier = modifier
+    ) {
+<span class="nc" id="L56">        Text(</span>
+<span class="nc" id="L57">            text = &quot;Top News&quot;,</span>
+<span class="nc" id="L58">            modifier = Modifier.padding(horizontal = 24.dp),</span>
+<span class="nc" id="L59">            fontWeight = FontWeight.Bold,</span>
+<span class="nc" id="L60">            fontStyle = FontStyle.Italic,</span>
+<span class="nc" id="L61">            style = MaterialTheme.typography.headlineSmall</span>
+        )
+
+<span class="nc" id="L64">        Spacer(modifier = Modifier.height(24.dp))</span>
+
+<span class="nc" id="L66">        SearchBar(</span>
+<span class="nc" id="L67">            text = &quot;&quot;,</span>
+<span class="nc" id="L68">            readOnly = true,</span>
+<span class="nc" id="L69">            onValueChange = {},</span>
+<span class="nc" id="L70">            onSearch = { },</span>
+<span class="nc" id="L71">            onClick = {</span>
+<span class="nc" id="L72">                navigateToSearch()</span>
+<span class="nc" id="L73">            }</span>
+        )
+
+<span class="nc" id="L76">        Spacer(modifier = Modifier.height(24.dp))</span>
+
+<span class="nc" id="L78">        Text(</span>
+<span class="nc" id="L79">            text = title, modifier = Modifier</span>
+<span class="nc" id="L80">                .fillMaxWidth()</span>
+<span class="nc" id="L81">                .padding(start = 24.dp)</span>
+<span class="nc" id="L82">                .basicMarquee(),</span>
+<span class="nc" id="L83">            fontSize = 12.sp,</span>
+<span class="nc" id="L84">            color = MaterialTheme.colorScheme.onBackground</span>
+        )
+<span class="nc" id="L86">        Spacer(modifier = Modifier.height(24.dp))</span>
+
+<span class="nc" id="L88">        ArticlesList(</span>
+<span class="nc" id="L89">            modifier = Modifier.padding(horizontal = 24.dp),</span>
+<span class="nc" id="L90">            articles = articles, onClick = {</span>
+<span class="nc" id="L91">                navigateToDetails(it)</span>
+<span class="nc" id="L92">            }</span>
+        )
+<span class="nc" id="L94">    }</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">}</span>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span>Generated by the Android Gradle plugin 8.4.0</div></body></html>

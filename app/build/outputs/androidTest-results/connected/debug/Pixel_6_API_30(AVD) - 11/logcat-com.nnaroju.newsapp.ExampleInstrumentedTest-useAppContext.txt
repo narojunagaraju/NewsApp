@@ -1,0 +1,2 @@
+07-06 17:59:47.900  7388  7411 I TestRunner: started: useAppContext(com.nnaroju.newsapp.ExampleInstrumentedTest)
+07-06 17:59:47.904  7388  7411 I TestRunner: finished: useAppContext(com.nnaroju.newsapp.ExampleInstrumentedTest)

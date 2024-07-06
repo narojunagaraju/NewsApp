@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.nnaroju.newsapp-mergeDebugResources-69:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/src/main/res/values-night/splash.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "362"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "141",
+                        "endLines": "7",
+                        "endColumns": "12",
+                        "endOffsets": "448"
+                    }
+                },
+                {
+                    "source": "/Users/nnaroju/.gradle/caches/transforms-4/f6aed9fa80009357ba280f8928e23438/transformed/core-splashscreen-1.0.1/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "85",
+                        "endOffsets": "136"
+                    }
+                }
+            ]
+        }
+    ]
+}

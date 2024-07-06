@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NewsDatabase_Impl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=0;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">debug</a> &gt; <a href="index.source.html" class="el_package">com.nnaroju.newsapp.data.local</a> &gt; <span class="el_source">NewsDatabase_Impl.java</span></div><h1>NewsDatabase_Impl.java</h1><pre class="source lang-java linenums">package com.nnaroju.newsapp.data.local;
+
+import androidx.annotation.NonNull;
+import androidx.room.DatabaseConfiguration;
+import androidx.room.InvalidationTracker;
+import androidx.room.RoomDatabase;
+import androidx.room.RoomOpenHelper;
+import androidx.room.migration.AutoMigrationSpec;
+import androidx.room.migration.Migration;
+import androidx.room.util.DBUtil;
+import androidx.room.util.TableInfo;
+import androidx.sqlite.db.SupportSQLiteDatabase;
+import androidx.sqlite.db.SupportSQLiteOpenHelper;
+import java.lang.Class;
+import java.lang.Override;
+import java.lang.String;
+import java.lang.SuppressWarnings;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import javax.annotation.processing.Generated;
+
+@Generated(&quot;androidx.room.RoomProcessor&quot;)
+@SuppressWarnings({&quot;unchecked&quot;, &quot;deprecation&quot;})
+<span class="nc" id="L28">public final class NewsDatabase_Impl extends NewsDatabase {</span>
+  private volatile NewsDao _newsDao;
+
+  @Override
+  @NonNull
+  protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
+<span class="nc" id="L34">    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(2) {</span>
+      @Override
+      public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
+<span class="nc" id="L37">        db.execSQL(&quot;CREATE TABLE IF NOT EXISTS `Article` (`author` TEXT, `content` TEXT NOT NULL, `description` TEXT NOT NULL, `publishedAt` TEXT NOT NULL, `source` TEXT NOT NULL, `title` TEXT NOT NULL, `url` TEXT NOT NULL, `urlToImage` TEXT NOT NULL, PRIMARY KEY(`url`))&quot;);</span>
+<span class="nc" id="L38">        db.execSQL(&quot;CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)&quot;);</span>
+<span class="nc" id="L39">        db.execSQL(&quot;INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '60bcfacb8ef9b8ff31ba522e21f2e691')&quot;);</span>
+<span class="nc" id="L40">      }</span>
+
+      @Override
+      public void dropAllTables(@NonNull final SupportSQLiteDatabase db) {
+<span class="nc" id="L44">        db.execSQL(&quot;DROP TABLE IF EXISTS `Article`&quot;);</span>
+<span class="nc" id="L45">        final List&lt;? extends RoomDatabase.Callback&gt; _callbacks = mCallbacks;</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">        if (_callbacks != null) {</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">          for (RoomDatabase.Callback _callback : _callbacks) {</span>
+<span class="nc" id="L48">            _callback.onDestructiveMigration(db);</span>
+<span class="nc" id="L49">          }</span>
+        }
+<span class="nc" id="L51">      }</span>
+
+      @Override
+      public void onCreate(@NonNull final SupportSQLiteDatabase db) {
+<span class="nc" id="L55">        final List&lt;? extends RoomDatabase.Callback&gt; _callbacks = mCallbacks;</span>
+<span class="nc bnc" id="L56" title="All 2 branches missed.">        if (_callbacks != null) {</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">          for (RoomDatabase.Callback _callback : _callbacks) {</span>
+<span class="nc" id="L58">            _callback.onCreate(db);</span>
+<span class="nc" id="L59">          }</span>
+        }
+<span class="nc" id="L61">      }</span>
+
+      @Override
+      public void onOpen(@NonNull final SupportSQLiteDatabase db) {
+<span class="nc" id="L65">        mDatabase = db;</span>
+<span class="nc" id="L66">        internalInitInvalidationTracker(db);</span>
+<span class="nc" id="L67">        final List&lt;? extends RoomDatabase.Callback&gt; _callbacks = mCallbacks;</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">        if (_callbacks != null) {</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">          for (RoomDatabase.Callback _callback : _callbacks) {</span>
+<span class="nc" id="L70">            _callback.onOpen(db);</span>
+<span class="nc" id="L71">          }</span>
+        }
+<span class="nc" id="L73">      }</span>
+
+      @Override
+      public void onPreMigrate(@NonNull final SupportSQLiteDatabase db) {
+<span class="nc" id="L77">        DBUtil.dropFtsSyncTriggers(db);</span>
+<span class="nc" id="L78">      }</span>
+
+      @Override
+      public void onPostMigrate(@NonNull final SupportSQLiteDatabase db) {
+<span class="nc" id="L82">      }</span>
+
+      @Override
+      @NonNull
+      public RoomOpenHelper.ValidationResult onValidateSchema(
+          @NonNull final SupportSQLiteDatabase db) {
+<span class="nc" id="L88">        final HashMap&lt;String, TableInfo.Column&gt; _columnsArticle = new HashMap&lt;String, TableInfo.Column&gt;(8);</span>
+<span class="nc" id="L89">        _columnsArticle.put(&quot;author&quot;, new TableInfo.Column(&quot;author&quot;, &quot;TEXT&quot;, false, 0, null, TableInfo.CREATED_FROM_ENTITY));</span>
+<span class="nc" id="L90">        _columnsArticle.put(&quot;content&quot;, new TableInfo.Column(&quot;content&quot;, &quot;TEXT&quot;, true, 0, null, TableInfo.CREATED_FROM_ENTITY));</span>
+<span class="nc" id="L91">        _columnsArticle.put(&quot;description&quot;, new TableInfo.Column(&quot;description&quot;, &quot;TEXT&quot;, true, 0, null, TableInfo.CREATED_FROM_ENTITY));</span>
+<span class="nc" id="L92">        _columnsArticle.put(&quot;publishedAt&quot;, new TableInfo.Column(&quot;publishedAt&quot;, &quot;TEXT&quot;, true, 0, null, TableInfo.CREATED_FROM_ENTITY));</span>
+<span class="nc" id="L93">        _columnsArticle.put(&quot;source&quot;, new TableInfo.Column(&quot;source&quot;, &quot;TEXT&quot;, true, 0, null, TableInfo.CREATED_FROM_ENTITY));</span>
+<span class="nc" id="L94">        _columnsArticle.put(&quot;title&quot;, new TableInfo.Column(&quot;title&quot;, &quot;TEXT&quot;, true, 0, null, TableInfo.CREATED_FROM_ENTITY));</span>
+<span class="nc" id="L95">        _columnsArticle.put(&quot;url&quot;, new TableInfo.Column(&quot;url&quot;, &quot;TEXT&quot;, true, 1, null, TableInfo.CREATED_FROM_ENTITY));</span>
+<span class="nc" id="L96">        _columnsArticle.put(&quot;urlToImage&quot;, new TableInfo.Column(&quot;urlToImage&quot;, &quot;TEXT&quot;, true, 0, null, TableInfo.CREATED_FROM_ENTITY));</span>
+<span class="nc" id="L97">        final HashSet&lt;TableInfo.ForeignKey&gt; _foreignKeysArticle = new HashSet&lt;TableInfo.ForeignKey&gt;(0);</span>
+<span class="nc" id="L98">        final HashSet&lt;TableInfo.Index&gt; _indicesArticle = new HashSet&lt;TableInfo.Index&gt;(0);</span>
+<span class="nc" id="L99">        final TableInfo _infoArticle = new TableInfo(&quot;Article&quot;, _columnsArticle, _foreignKeysArticle, _indicesArticle);</span>
+<span class="nc" id="L100">        final TableInfo _existingArticle = TableInfo.read(db, &quot;Article&quot;);</span>
+<span class="nc bnc" id="L101" title="All 2 branches missed.">        if (!_infoArticle.equals(_existingArticle)) {</span>
+<span class="nc" id="L102">          return new RoomOpenHelper.ValidationResult(false, &quot;Article(com.nnaroju.newsapp.domain.model.Article).\n&quot;</span>
+                  + &quot; Expected:\n&quot; + _infoArticle + &quot;\n&quot;
+                  + &quot; Found:\n&quot; + _existingArticle);
+        }
+<span class="nc" id="L106">        return new RoomOpenHelper.ValidationResult(true, null);</span>
+      }
+    }, &quot;60bcfacb8ef9b8ff31ba522e21f2e691&quot;, &quot;8ada2cafa410f386464e04a4e8cd05f0&quot;);
+<span class="nc" id="L109">    final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();</span>
+<span class="nc" id="L110">    final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);</span>
+<span class="nc" id="L111">    return _helper;</span>
+  }
+
+  @Override
+  @NonNull
+  protected InvalidationTracker createInvalidationTracker() {
+<span class="nc" id="L117">    final HashMap&lt;String, String&gt; _shadowTablesMap = new HashMap&lt;String, String&gt;(0);</span>
+<span class="nc" id="L118">    final HashMap&lt;String, Set&lt;String&gt;&gt; _viewTables = new HashMap&lt;String, Set&lt;String&gt;&gt;(0);</span>
+<span class="nc" id="L119">    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, &quot;Article&quot;);</span>
+  }
+
+  @Override
+  public void clearAllTables() {
+<span class="nc" id="L124">    super.assertNotMainThread();</span>
+<span class="nc" id="L125">    final SupportSQLiteDatabase _db = super.getOpenHelper().getWritableDatabase();</span>
+    try {
+<span class="nc" id="L127">      super.beginTransaction();</span>
+<span class="nc" id="L128">      _db.execSQL(&quot;DELETE FROM `Article`&quot;);</span>
+<span class="nc" id="L129">      super.setTransactionSuccessful();</span>
+    } finally {
+<span class="nc" id="L131">      super.endTransaction();</span>
+<span class="nc" id="L132">      _db.query(&quot;PRAGMA wal_checkpoint(FULL)&quot;).close();</span>
+<span class="nc bnc" id="L133" title="All 2 branches missed.">      if (!_db.inTransaction()) {</span>
+<span class="nc" id="L134">        _db.execSQL(&quot;VACUUM&quot;);</span>
+      }
+    }
+<span class="nc" id="L137">  }</span>
+
+  @Override
+  @NonNull
+  protected Map&lt;Class&lt;?&gt;, List&lt;Class&lt;?&gt;&gt;&gt; getRequiredTypeConverters() {
+<span class="nc" id="L142">    final HashMap&lt;Class&lt;?&gt;, List&lt;Class&lt;?&gt;&gt;&gt; _typeConvertersMap = new HashMap&lt;Class&lt;?&gt;, List&lt;Class&lt;?&gt;&gt;&gt;();</span>
+<span class="nc" id="L143">    _typeConvertersMap.put(NewsDao.class, NewsDao_Impl.getRequiredConverters());</span>
+<span class="nc" id="L144">    return _typeConvertersMap;</span>
+  }
+
+  @Override
+  @NonNull
+  public Set&lt;Class&lt;? extends AutoMigrationSpec&gt;&gt; getRequiredAutoMigrationSpecs() {
+<span class="nc" id="L150">    final HashSet&lt;Class&lt;? extends AutoMigrationSpec&gt;&gt; _autoMigrationSpecsSet = new HashSet&lt;Class&lt;? extends AutoMigrationSpec&gt;&gt;();</span>
+<span class="nc" id="L151">    return _autoMigrationSpecsSet;</span>
+  }
+
+  @Override
+  @NonNull
+  public List&lt;Migration&gt; getAutoMigrations(
+      @NonNull final Map&lt;Class&lt;? extends AutoMigrationSpec&gt;, AutoMigrationSpec&gt; autoMigrationSpecs) {
+<span class="nc" id="L158">    final List&lt;Migration&gt; _autoMigrations = new ArrayList&lt;Migration&gt;();</span>
+<span class="nc" id="L159">    return _autoMigrations;</span>
+  }
+
+  @Override
+  public NewsDao getNewsDao() {
+<span class="nc bnc" id="L164" title="All 2 branches missed.">    if (_newsDao != null) {</span>
+<span class="nc" id="L165">      return _newsDao;</span>
+    } else {
+<span class="nc" id="L167">      synchronized(this) {</span>
+<span class="nc bnc" id="L168" title="All 2 branches missed.">        if(_newsDao == null) {</span>
+<span class="nc" id="L169">          _newsDao = new NewsDao_Impl(this);</span>
+        }
+<span class="nc" id="L171">        return _newsDao;</span>
+      }
+    }
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span>Generated by the Android Gradle plugin 8.4.0</div></body></html>

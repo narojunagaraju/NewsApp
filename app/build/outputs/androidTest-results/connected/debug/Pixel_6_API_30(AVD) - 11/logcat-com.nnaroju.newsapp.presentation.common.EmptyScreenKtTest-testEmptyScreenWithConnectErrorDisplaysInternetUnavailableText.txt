@@ -1,0 +1,192 @@
+07-06 18:00:07.336  7388  7411 I TestRunner: started: testEmptyScreenWithConnectErrorDisplaysInternetUnavailableText(com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest)
+07-06 18:00:07.340  7388  7411 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.junit4.EspressoLink@b74665]
+07-06 18:00:07.343  7388  7411 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+07-06 18:00:07.347   535   559 D EventSequenceValidator: inc AccIntentStartedEvents to 2
+07-06 18:00:07.349   408   408 I perfetto: ing_service_impl.cc:758 Configured tracing session 49, #sources:1, duration:5000 ms, #buffers:1, total buffer size:4096 KB, total sessions:2, uid:1071 session name: ""
+07-06 18:00:07.349   397   397 I perfetto: probes_producer.cc:230  Ftrace setup (target_buf=49)
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.353   535  5638 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.359  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506 in: PRE_ON_CREATE
+07-06 18:00:07.359  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506
+07-06 18:00:07.365  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506 in: CREATED
+07-06 18:00:07.365  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506
+07-06 18:00:07.366  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506 in: STARTED
+07-06 18:00:07.366  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506
+07-06 18:00:07.366   313   357 D goldfish-address-space: claimShared: Ask to claim region [0x3f6de4000 0x3f77c8000]
+07-06 18:00:07.371  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506 in: RESUMED
+07-06 18:00:07.371  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506
+07-06 18:00:07.374  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506 in: PAUSED
+07-06 18:00:07.374  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.375   535  4299 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.379  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4a31b8c in: PRE_ON_CREATE
+07-06 18:00:07.380  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+07-06 18:00:07.384  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4a31b8c in: CREATED
+07-06 18:00:07.384  7388  7388 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=androidx.activity.ComponentActivity@4a31b8c
+07-06 18:00:07.385  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4a31b8c in: STARTED
+07-06 18:00:07.385  7388  7388 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=androidx.activity.ComponentActivity@4a31b8c
+07-06 18:00:07.385  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4a31b8c in: RESUMED
+07-06 18:00:07.386  7388  7388 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=androidx.activity.ComponentActivity@4a31b8c
+07-06 18:00:07.417   313   357 D goldfish-address-space: claimShared: Ask to claim region [0x3f6400000 0x3f6de4000]
+07-06 18:00:07.422   313   357 D goldfish-address-space: claimShared: Ask to claim region [0x3f49e4000 0x3f53c8000]
+07-06 18:00:07.428   313   357 D goldfish-address-space: claimShared: Ask to claim region [0x3f53c8000 0x3f5dac000]
+07-06 18:00:07.429   313   357 D goldfish-address-space: claimShared: Ask to claim region [0x3f89e4000 0x3f93c8000]
+07-06 18:00:07.445  1435  7423 I PBSessionCacheImpl: Deleted sessionId[6312917008887022] from persistence.
+07-06 18:00:07.447  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506 in: STOPPED
+07-06 18:00:07.447  1435  2179 W SearchServiceCore: Abort, client detached.
+07-06 18:00:07.447  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506
+07-06 18:00:07.464   535   564 D ArtManagerInternalImpl: /data/misc/iorapd/com.nnaroju.newsapp/1/androidx.activity.ComponentActivity/compiled_traces/compiled_trace.pb doesn't exist
+07-06 18:00:07.465   535   564 I ActivityTaskManager: Displayed com.nnaroju.newsapp/androidx.activity.ComponentActivity: +117ms
+07-06 18:00:07.465   535   559 D EventSequenceValidator: dec AccIntentStartedEvents to 1
+07-06 18:00:07.583   535   559 D EventSequenceValidator: inc AccIntentStartedEvents to 2
+07-06 18:00:07.585   408   408 I perfetto: ing_service_impl.cc:758 Configured tracing session 50, #sources:1, duration:5000 ms, #buffers:1, total buffer size:4096 KB, total sessions:3, uid:1071 session name: ""
+07-06 18:00:07.585   397   397 I perfetto: probes_producer.cc:230  Ftrace setup (target_buf=50)
+07-06 18:00:07.585  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4a31b8c in: PAUSED
+07-06 18:00:07.585  7388  7388 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=androidx.activity.ComponentActivity@4a31b8c
+07-06 18:00:07.586   535   559 D EventSequenceValidator: dec AccIntentStartedEvents to 1
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.586   535  3664 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.592  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95 in: PRE_ON_CREATE
+07-06 18:00:07.592  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95
+07-06 18:00:07.596  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95 in: CREATED
+07-06 18:00:07.597  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95
+07-06 18:00:07.599  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95 in: STARTED
+07-06 18:00:07.599  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95
+07-06 18:00:07.600  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95 in: RESUMED
+07-06 18:00:07.600  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95
+07-06 18:00:07.622   313   357 D goldfish-address-space: claimShared: Ask to claim region [0x3f4000000 0x3f49e4000]
+07-06 18:00:07.624   313   357 D goldfish-address-space: claimShared: Ask to claim region [0x3f8000000 0x3f89e4000]
+07-06 18:00:07.625   313   357 D goldfish-address-space: claimShared: Ask to claim region [0x3fb1b0000 0x3fbb94000]
+07-06 18:00:07.635   535   564 I ActivityTaskManager: Displayed com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +54ms
+07-06 18:00:07.638   535   559 D EventSequenceValidator: inc AccIntentStartedEvents to 2
+07-06 18:00:07.640  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4a31b8c in: STOPPED
+07-06 18:00:07.640  7388  7388 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=androidx.activity.ComponentActivity@4a31b8c
+07-06 18:00:07.641   535   559 D EventSequenceValidator: dec AccIntentStartedEvents to 1
+07-06 18:00:07.641  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4a31b8c in: DESTROYED
+07-06 18:00:07.641  7388  7388 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+07-06 18:00:07.642   408   408 I perfetto: ing_service_impl.cc:758 Configured tracing session 51, #sources:1, duration:5000 ms, #buffers:1, total buffer size:4096 KB, total sessions:4, uid:1071 session name: ""
+07-06 18:00:07.642   397   397 I perfetto: probes_producer.cc:230  Ftrace setup (target_buf=51)
+07-06 18:00:07.654  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95 in: PAUSED
+07-06 18:00:07.654  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95
+07-06 18:00:07.654   535  1517 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.654   535  1517 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.654   535  1517 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.654   535  1517 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.654   535  1517 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.654   535  1517 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.654   535  1517 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.654   535  1517 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.654   535  1517 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.655   535  1517 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.655   535  1517 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.655   535  1517 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.655   535  1517 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.655   535  1517 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.655   535  1517 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.655   535  1517 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.655   535  1517 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.655   535  1517 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.655   535  1517 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.655   535  1517 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.659  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506 in: DESTROYED
+07-06 18:00:07.659  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@1a7c506
+07-06 18:00:07.661  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@c03ad49 in: PRE_ON_CREATE
+07-06 18:00:07.661  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@c03ad49
+07-06 18:00:07.669  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@c03ad49 in: CREATED
+07-06 18:00:07.669  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@c03ad49
+07-06 18:00:07.671  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@c03ad49 in: STARTED
+07-06 18:00:07.671  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@c03ad49
+07-06 18:00:07.672  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@c03ad49 in: RESUMED
+07-06 18:00:07.672  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@c03ad49
+07-06 18:00:07.689   313   357 D goldfish-address-space: claimShared: Ask to claim region [0x3f6400000 0x3f6de4000]
+07-06 18:00:07.693   313   357 D goldfish-address-space: claimShared: Ask to claim region [0x3f6de4000 0x3f77c8000]
+07-06 18:00:07.694   313   357 D goldfish-address-space: claimShared: Ask to claim region [0x3f49e4000 0x3f53c8000]
+07-06 18:00:07.701   535   564 I ActivityTaskManager: Displayed com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +63ms
+07-06 18:00:07.707   313   357 D goldfish-address-space: claimShared: Ask to claim region [0x3f77c8000 0x3f7e1c000]
+07-06 18:00:07.719  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95 in: STOPPED
+07-06 18:00:07.720  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95
+07-06 18:00:07.721  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95 in: DESTROYED
+07-06 18:00:07.721  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@8e9c95
+07-06 18:00:07.724  7388  7388 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@c03ad49 in: PAUSED
+07-06 18:00:07.725  7388  7388 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.nnaroju.newsapp/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nnaroju.newsapp/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@c03ad49
+07-06 18:00:07.725  1086  1105 W System  : A resource failed to call release.
+07-06 18:00:07.725  1086  1105 I chatty  : uid=10156(com.google.android.apps.nexuslauncher) FinalizerDaemon identical 2 lines
+07-06 18:00:07.725  1086  1105 W System  : A resource failed to call release.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726  1086  1105 W System  : A resource failed to call release.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726  1086  1105 W System  : A resource failed to call release.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.726   535  4299 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+07-06 18:00:07.735  7388  7411 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.junit4.EspressoLink@b74665]
+07-06 18:00:07.735  7388  7411 I TestRunner: finished: testEmptyScreenWithConnectErrorDisplaysInternetUnavailableText(com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest)

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SearchBar.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">com.nnaroju.newsapp.presentation.common</a> &gt; <span class="el_source">SearchBar.kt</span></div><h1>SearchBar.kt</h1><pre class="source lang-java linenums">package com.nnaroju.newsapp.presentation.common
+
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
+import androidx.compose.foundation.border
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.composed
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.nnaroju.newsapp.ui.theme.NewsAppTheme
+
+@Composable
+fun SearchBar(
+    text: String,
+    readOnly: Boolean,
+    onValueChange: (String) -&gt; Unit,
+    onSearch: () -&gt; Unit,
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">    modifier: Modifier = Modifier,</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">    onClick: (() -&gt; Unit)? = null</span>
+<span class="pc bpc" id="L40" title="26 of 42 branches missed.">) {</span>
+<span class="fc" id="L41">    val interactionSource = remember {</span>
+<span class="fc" id="L42">        MutableInteractionSource()</span>
+    }
+
+<span class="fc" id="L45">    val isClicked = interactionSource.collectIsPressedAsState().value</span>
+
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">    LaunchedEffect(key1 = isClicked) {</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">        if (isClicked) {</span>
+<span class="nc bnc" id="L49" title="All 2 branches missed.">            onClick?.invoke()</span>
+        }
+<span class="fc" id="L51">    }</span>
+
+<span class="fc" id="L53">    Box(modifier = modifier.padding(horizontal = 24.dp)) {</span>
+<span class="fc" id="L54">        TextField(</span>
+<span class="fc" id="L55">            modifier = Modifier</span>
+<span class="fc" id="L56">                .fillMaxWidth()</span>
+<span class="fc" id="L57">                .searchBarBorder(),</span>
+<span class="fc" id="L58">            value = text,</span>
+<span class="fc" id="L59">            onValueChange = onValueChange,</span>
+<span class="fc" id="L60">            readOnly = readOnly,</span>
+<span class="fc" id="L61">            leadingIcon = {</span>
+<span class="pc bpc" id="L62" title="5 of 8 branches missed.">                Icon(</span>
+<span class="fc" id="L63">                    imageVector = Icons.Filled.Search,</span>
+<span class="fc" id="L64">                    contentDescription = null,</span>
+<span class="fc" id="L65">                    modifier = Modifier.size(20.dp),</span>
+<span class="fc" id="L66">                    tint = MaterialTheme.colorScheme.onBackground</span>
+<span class="nc" id="L67">                )</span>
+<span class="fc" id="L68">            },</span>
+<span class="fc" id="L69">            placeholder = {</span>
+<span class="pc bpc" id="L70" title="4 of 8 branches missed.">                Text(</span>
+<span class="fc" id="L71">                    text = &quot;Search&quot;,</span>
+<span class="fc" id="L72">                    style = MaterialTheme.typography.bodySmall,</span>
+<span class="fc" id="L73">                    color = MaterialTheme.colorScheme.onBackground</span>
+<span class="nc" id="L74">                )</span>
+<span class="fc" id="L75">            },</span>
+<span class="fc" id="L76">            shape = MaterialTheme.shapes.medium,</span>
+<span class="fc" id="L77">            singleLine = true,</span>
+<span class="fc" id="L78">            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),</span>
+<span class="fc" id="L79">            keyboardActions = KeyboardActions(</span>
+<span class="fc" id="L80">                onSearch = {</span>
+<span class="fc" id="L81">                    onSearch()</span>
+<span class="fc" id="L82">                }</span>
+            ),
+<span class="fc" id="L84">            colors = TextFieldDefaults.colors(</span>
+<span class="fc" id="L85">                focusedIndicatorColor = Color.Transparent,</span>
+<span class="fc" id="L86">                unfocusedIndicatorColor = Color.Transparent,</span>
+<span class="fc" id="L87">                disabledIndicatorColor = Color.Transparent</span>
+            ),
+<span class="fc" id="L89">            textStyle = MaterialTheme.typography.bodySmall,</span>
+<span class="fc" id="L90">            interactionSource = interactionSource</span>
+        )
+<span class="fc" id="L92">    }</span>
+<span class="pc bpc" id="L93" title="1 of 2 branches missed.">}</span>
+
+<span class="fc" id="L95">fun Modifier.searchBarBorder() = composed {</span>
+<span class="pc bpc" id="L96" title="2 of 4 branches missed.">    if (!isSystemInDarkTheme()) {</span>
+<span class="nc" id="L97">        border(</span>
+<span class="nc" id="L98">            width = 1.dp,</span>
+<span class="nc" id="L99">            color = Color.Black,</span>
+<span class="nc" id="L100">            shape = MaterialTheme.shapes.medium</span>
+        )
+    } else {
+<span class="fc" id="L103">        this</span>
+    }
+<span class="fc" id="L105">}</span>
+
+@Preview(showBackground = true)
+@Preview(uiMode = UI_MODE_NIGHT_YES)
+@Composable
+<span class="nc bnc" id="L110" title="All 6 branches missed.">private fun SearchBarPreview() {</span>
+<span class="pc bnc" id="L111" title="All 2 branches missed.">    NewsAppTheme {</span>
+<span class="nc bnc" id="L112" title="All 8 branches missed.">        SearchBar(</span>
+<span class="nc" id="L113">            text = &quot;&quot;,</span>
+<span class="nc" id="L114">            readOnly = true,</span>
+<span class="nc" id="L115">            onValueChange = {},</span>
+<span class="nc" id="L116">            onSearch = { /*TODO*/ }</span>
+<span class="nc" id="L117">        )</span>
+<span class="nc" id="L118">    }</span>
+<span class="nc bnc" id="L119" title="All 2 branches missed.">}</span>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

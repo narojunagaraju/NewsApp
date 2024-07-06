@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SearchViewModel.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">com.nnaroju.newsapp.presentation.search</a> &gt; <span class="el_source">SearchViewModel.kt</span></div><h1>SearchViewModel.kt</h1><pre class="source lang-java linenums">package com.nnaroju.newsapp.presentation.search
+
+import androidx.compose.runtime.mutableStateOf
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import androidx.paging.cachedIn
+import com.nnaroju.newsapp.domain.usecases.news.NewsUseCases
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
+
+@HiltViewModel
+<span class="nc" id="L12">class SearchViewModel @Inject constructor(</span>
+<span class="nc" id="L13">    private val newsUseCases: NewsUseCases</span>
+<span class="nc" id="L14">) : ViewModel() {</span>
+
+<span class="nc" id="L16">    var state = mutableStateOf(SearchState())</span>
+        private set
+
+    fun onEvent(event: SearchEvent) {
+<span class="nc" id="L20">        when (event) {</span>
+<span class="nc bnc" id="L21" title="All 2 branches missed.">            is SearchEvent.UpdateSearchQuery -&gt; {</span>
+<span class="nc" id="L22">                state.value = state.value.copy(searchQuery = event.searchQuery)</span>
+            }
+
+<span class="nc bnc" id="L25" title="All 2 branches missed.">            is SearchEvent.SearchNews -&gt; {</span>
+<span class="nc" id="L26">                SearchNews()</span>
+            }
+        }
+<span class="nc" id="L29">    }</span>
+
+
+    fun SearchNews() {
+<span class="nc" id="L33">        val articles = newsUseCases.searchNews(</span>
+<span class="nc" id="L34">            searchQuery = state.value.searchQuery,</span>
+<span class="nc" id="L35">            sources = listOf(&quot;abc-news&quot;, &quot;bbc-news&quot;, &quot;business-insider&quot;)</span>
+<span class="nc" id="L36">        ).cachedIn(viewModelScope)</span>
+<span class="nc" id="L37">        state.value = state.value.copy(articles = articles)</span>
+<span class="nc" id="L38">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

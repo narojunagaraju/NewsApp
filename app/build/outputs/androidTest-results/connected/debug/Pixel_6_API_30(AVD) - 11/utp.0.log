@@ -1,0 +1,48 @@
+INFO: Constructing runner from config.
+INFO: Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "com.nnaroju.newsapp"
+    test_package: "com.nnaroju.newsapp.test"
+    test_runner_class: "androidx.test.runner.AndroidJUnitRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/com.nnaroju.newsapp/additional_test_output"
+    }
+    args_map {
+      key: "coverage"
+      value: "true"
+    }
+    args_map {
+      key: "coverageFile"
+      value: "/data/data/com.nnaroju.newsapp/coverage.ec"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+INFO: No installables found in test fixture. Nothing to install.
+INFO: Installing [/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/apk/debug/app-debug.apk] on device emulator-5554.
+INFO: Installing [/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk] on device emulator-5554.
+INFO: Start logcat streaming.
+INFO: Running Android Instrumentation driver.
+INFO: Stop logcat streaming.
+INFO: Uninstalling com.nnaroju.newsapp for device emulator-5554.
+INFO: Uninstalling com.nnaroju.newsapp.test for device emulator-5554.
+INFO: Execute com.nnaroju.newsapp.ExampleInstrumentedTest.useAppContext: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.ArticlesListTest.testArticlesListWithPagingArticlesDisplaysArticleCards: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.ArticlesListTest.testArticlesListWithPagingErrorDisplaysEmptyScreenWithUnknownError: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.ArticlesListTest.testArticlesListWithEmptyPagingArticlesDisplaysEmptyScreen: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.ArticlesListTest.testArticlesListWithEmptyArticlesDisplaysEmptyScreen: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.ArticlesListTest.testArticlesListWithArticlesDisplaysArticleCards: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.ButtonKtTest.testNewsButtonWithTextIsDisplayed: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.ButtonKtTest.testNewsTextButtonWithTextIsDisplayed: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest.testEmptyScreenWithConnectErrorDisplaysInternetUnavailableText: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest.testEmptyScreenWithUnknownErrorDisplaysUnknownErrorText: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest.testEmptyScreenWithSocketTimeOutErrorDisplaysServerUnavailableText: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest.testEmptyScreenWithErrorMessageNullDisplaysYouHaveNotSavedText: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.SearchBarKtTest.testSearchBarWithEmptyTextPlaceHolderTextIsDisplayed: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.SearchBarKtTest.testSearchBarWithTextIsDisplayed: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.common.SearchBarKtTest.testSearchBarWithSearchClickTriggersTheOnSearch: PASSED
+INFO: Execute com.nnaroju.newsapp.presentation.onboarding.OnboardingScreenKtTest.testOnboardingFlow: PASSED

@@ -19,17 +19,30 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build and run tests
+      - name: Build and run unit tests
         run: ./gradlew build test
 
-      - name: Generate Jacoco report
-        run: ./gradlew jacocoTestReport
+      - name: Set up emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 30
+          target: default
+          arch: x86_64
+          profile: Nexus 6
+          script: ./gradlew connectedAndroidTest
+
+      - name: Generate combined Jacoco report
+        run: ./gradlew JacocoDebugCodeCoverage
 
       - name: Upload Jacoco report
         uses: actions/upload-artifact@v2
         with:
           name: jacoco-report
-          path: build/reports/jacoco/test/html
+          path: build/reports/jacoco/JacocoDebugCodeCoverage/html
+

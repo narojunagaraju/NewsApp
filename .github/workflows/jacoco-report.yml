@@ -39,20 +39,16 @@ jobs:
           arch: x86_64
           profile: Nexus 6
           emulator-options: "-no-snapshot-load"
-
-      - name: Wait for Android Emulator to fully boot
-        run: |
-          adb wait-for-device shell getprop sys.boot_completed | grep -m 1 '1'
-          sleep 30  # Extra wait time to ensure the emulator is ready
+          script: adb wait-for-device shell getprop sys.boot_completed | grep -m 1 '1' && sleep 30
 
       - name: Run instrumentation tests
         run: ./gradlew connectedAndroidTest
 
       - name: Generate combined Jacoco report
-        run: ./gradlew JacocoDebugCodeCoverage
+        run: ./gradlew combinedReport
 
       - name: Upload Jacoco report
         uses: actions/upload-artifact@v2
         with:
           name: jacoco-report
-          path: build/reports/jacoco/JacocoDebugCodeCoverage/html
+          path: build/reports/jacoco/combined/html

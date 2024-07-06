@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.nnaroju.newsapp.domain.model.Article
 import com.nnaroju.newsapp.presentation.common.ArticlesList
+import com.nnaroju.newsapp.presentation.navgraph.Route
 
 @Composable
 fun BookmarkScreen(

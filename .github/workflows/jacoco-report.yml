@@ -37,8 +37,13 @@ jobs:
           api-level: 29
           script: ./gradlew JacocoDebugCodeCoverage
 
-      - name: Upload Jacoco report
-        uses: actions/upload-artifact@v2
+      - name: Jacoco Report to PR
+        id: jacoco
+        uses: madrapps/jacoco-report@v1.6.1
         with:
-          name: jacoco-report
-          path: build/reports/jacoco/JacocoDebugCodeCoverage/html
+          paths: ${{ github.workspace }}/build/reports/jacoco/testCoverage/testCoverage.xml
+          token: ${{ secrets.COVERAGE_TOKEN }}
+          min-coverage-overall: 10
+          min-coverage-changed-files: 1
+          title: Code Coverage
+          update-comment: true

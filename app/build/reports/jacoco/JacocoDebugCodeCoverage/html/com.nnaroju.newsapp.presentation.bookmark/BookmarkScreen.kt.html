@@ -11,23 +11,24 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.nnaroju.newsapp.domain.model.Article
 import com.nnaroju.newsapp.presentation.common.ArticlesList
+import com.nnaroju.newsapp.presentation.navgraph.Route
 
 @Composable
 fun BookmarkScreen(
     state: BookmarkState,
     navigateToDetails: (Article) -&gt; Unit,
-<span class="nc bnc" id="L19" title="All 2 branches missed.">    modifier: Modifier = Modifier</span>
-<span class="nc bnc" id="L20" title="All 24 branches missed.">) {</span>
-<span class="nc" id="L21">    Column(modifier.padding(horizontal = 24.dp)) {</span>
-<span class="nc" id="L22">        Text(</span>
-<span class="nc" id="L23">            text = &quot;Bookmark&quot;,</span>
-<span class="nc" id="L24">            style = MaterialTheme.typography.displayMedium,</span>
-<span class="nc" id="L25">            color = MaterialTheme.colorScheme.onBackground</span>
+<span class="nc bnc" id="L20" title="All 2 branches missed.">    modifier: Modifier = Modifier</span>
+<span class="nc bnc" id="L21" title="All 24 branches missed.">) {</span>
+<span class="nc" id="L22">    Column(modifier.padding(horizontal = 24.dp)) {</span>
+<span class="nc" id="L23">        Text(</span>
+<span class="nc" id="L24">            text = &quot;Bookmark&quot;,</span>
+<span class="nc" id="L25">            style = MaterialTheme.typography.displayMedium,</span>
+<span class="nc" id="L26">            color = MaterialTheme.colorScheme.onBackground</span>
         )
-<span class="nc" id="L27">        Spacer(modifier = Modifier.height(24.dp))</span>
-<span class="nc" id="L28">        ArticlesList(articles = state.articles, onClick = {</span>
-<span class="nc" id="L29">            navigateToDetails(it)</span>
-<span class="nc" id="L30">        })</span>
-<span class="nc" id="L31">    }</span>
-<span class="nc bnc" id="L32" title="All 2 branches missed.">}</span>
+<span class="nc" id="L28">        Spacer(modifier = Modifier.height(24.dp))</span>
+<span class="nc" id="L29">        ArticlesList(articles = state.articles, onClick = {</span>
+<span class="nc" id="L30">            navigateToDetails(it)</span>
+<span class="nc" id="L31">        })</span>
+<span class="nc" id="L32">    }</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">}</span>
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

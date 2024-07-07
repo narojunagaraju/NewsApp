@@ -1,19 +1,175 @@
-# 2024-07-06T12:30:18.518976Z:
+# 2024-07-07T04:13:07.187855Z:
 test_suite_meta_data {
-  scheduled_test_case_count: 16
+  scheduled_test_case_count: 5
 }
 test_status: PASSED
 test_result {
   test_case {
-    test_class: "ExampleInstrumentedTest"
-    test_package: "com.nnaroju.newsapp"
-    test_method: "useAppContext"
+    test_class: "DetailsTopBarKtTest"
+    test_package: "com.nnaroju.newsapp.presentation.details.components"
+    test_method: "testSaveIconClick"
     start_time {
-      seconds: 1720268988
-      nanos: 168000000
+      seconds: 1720325579
+      nanos: 748000000
     }
     end_time {
-      seconds: 1720268988
+      seconds: 1720325580
+      nanos: 780000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.details.components.DetailsTopBarKtTest-testSaveIconClick.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DetailsTopBarKtTest"
+    test_package: "com.nnaroju.newsapp.presentation.details.components"
+    test_method: "testNavigationIconClick"
+    start_time {
+      seconds: 1720325581
+      nanos: 517000000
+    }
+    end_time {
+      seconds: 1720325581
+      nanos: 948000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.details.components.DetailsTopBarKtTest-testNavigationIconClick.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DetailsTopBarKtTest"
+    test_package: "com.nnaroju.newsapp.presentation.details.components"
+    test_method: "testShareIconClick"
+    start_time {
+      seconds: 1720325582
+      nanos: 678000000
+    }
+    end_time {
+      seconds: 1720325583
+      nanos: 78000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.details.components.DetailsTopBarKtTest-testShareIconClick.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DetailsTopBarKtTest"
+    test_package: "com.nnaroju.newsapp.presentation.details.components"
+    test_method: "testTopAppBar"
+    start_time {
+      seconds: 1720325583
+      nanos: 800000000
+    }
+    end_time {
+      seconds: 1720325584
       nanos: 201000000
     }
   }
@@ -24,7 +180,7 @@ test_result {
       namespace: "android"
     }
     source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.ExampleInstrumentedTest-useAppContext.txt"
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.details.components.DetailsTopBarKtTest-testTopAppBar.txt"
     }
   }
   output_artifact {
@@ -57,16 +213,16 @@ test_result {
 }
 test_result {
   test_case {
-    test_class: "ArticlesListTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testArticlesListWithPagingArticlesDisplaysArticleCards"
+    test_class: "DetailsTopBarKtTest"
+    test_package: "com.nnaroju.newsapp.presentation.details.components"
+    test_method: "testSearchIconClick"
     start_time {
-      seconds: 1720268988
-      nanos: 219000000
+      seconds: 1720325584
+      nanos: 984000000
     }
     end_time {
-      seconds: 1720268989
-      nanos: 461000000
+      seconds: 1720325585
+      nanos: 364000000
     }
   }
   test_status: PASSED
@@ -76,735 +232,7 @@ test_result {
       namespace: "android"
     }
     source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.ArticlesListTest-testArticlesListWithPagingArticlesDisplaysArticleCards.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "ArticlesListTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testArticlesListWithPagingErrorDisplaysEmptyScreenWithUnknownError"
-    start_time {
-      seconds: 1720268990
-      nanos: 211000000
-    }
-    end_time {
-      seconds: 1720269000
-      nanos: 916000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.ArticlesListTest-testArticlesListWithPagingErrorDisplaysEmptyScreenWithUnknownError.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "ArticlesListTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testArticlesListWithEmptyPagingArticlesDisplaysEmptyScreen"
-    start_time {
-      seconds: 1720269001
-      nanos: 616000000
-    }
-    end_time {
-      seconds: 1720269002
-      nanos: 287000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.ArticlesListTest-testArticlesListWithEmptyPagingArticlesDisplaysEmptyScreen.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "ArticlesListTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testArticlesListWithEmptyArticlesDisplaysEmptyScreen"
-    start_time {
-      seconds: 1720269003
-      nanos: 64000000
-    }
-    end_time {
-      seconds: 1720269003
-      nanos: 508000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.ArticlesListTest-testArticlesListWithEmptyArticlesDisplaysEmptyScreen.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "ArticlesListTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testArticlesListWithArticlesDisplaysArticleCards"
-    start_time {
-      seconds: 1720269004
-      nanos: 288000000
-    }
-    end_time {
-      seconds: 1720269004
-      nanos: 645000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.ArticlesListTest-testArticlesListWithArticlesDisplaysArticleCards.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "ButtonKtTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testNewsButtonWithTextIsDisplayed"
-    start_time {
-      seconds: 1720269005
-      nanos: 420000000
-    }
-    end_time {
-      seconds: 1720269005
-      nanos: 758000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.ButtonKtTest-testNewsButtonWithTextIsDisplayed.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "ButtonKtTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testNewsTextButtonWithTextIsDisplayed"
-    start_time {
-      seconds: 1720269006
-      nanos: 520000000
-    }
-    end_time {
-      seconds: 1720269006
-      nanos: 825000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.ButtonKtTest-testNewsTextButtonWithTextIsDisplayed.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "EmptyScreenKtTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testEmptyScreenWithConnectErrorDisplaysInternetUnavailableText"
-    start_time {
-      seconds: 1720269007
-      nanos: 592000000
-    }
-    end_time {
-      seconds: 1720269007
-      nanos: 993000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest-testEmptyScreenWithConnectErrorDisplaysInternetUnavailableText.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "EmptyScreenKtTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testEmptyScreenWithUnknownErrorDisplaysUnknownErrorText"
-    start_time {
-      seconds: 1720269008
-      nanos: 724000000
-    }
-    end_time {
-      seconds: 1720269009
-      nanos: 197000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest-testEmptyScreenWithUnknownErrorDisplaysUnknownErrorText.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "EmptyScreenKtTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testEmptyScreenWithSocketTimeOutErrorDisplaysServerUnavailableText"
-    start_time {
-      seconds: 1720269009
-      nanos: 916000000
-    }
-    end_time {
-      seconds: 1720269010
-      nanos: 309000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest-testEmptyScreenWithSocketTimeOutErrorDisplaysServerUnavailableText.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "EmptyScreenKtTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testEmptyScreenWithErrorMessageNullDisplaysYouHaveNotSavedText"
-    start_time {
-      seconds: 1720269011
-      nanos: 86000000
-    }
-    end_time {
-      seconds: 1720269011
-      nanos: 509000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest-testEmptyScreenWithErrorMessageNullDisplaysYouHaveNotSavedText.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "SearchBarKtTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testSearchBarWithEmptyTextPlaceHolderTextIsDisplayed"
-    start_time {
-      seconds: 1720269012
-      nanos: 224000000
-    }
-    end_time {
-      seconds: 1720269012
-      nanos: 665000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.SearchBarKtTest-testSearchBarWithEmptyTextPlaceHolderTextIsDisplayed.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "SearchBarKtTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testSearchBarWithTextIsDisplayed"
-    start_time {
-      seconds: 1720269013
-      nanos: 392000000
-    }
-    end_time {
-      seconds: 1720269013
-      nanos: 701000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.SearchBarKtTest-testSearchBarWithTextIsDisplayed.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "SearchBarKtTest"
-    test_package: "com.nnaroju.newsapp.presentation.common"
-    test_method: "testSearchBarWithSearchClickTriggersTheOnSearch"
-    start_time {
-      seconds: 1720269014
-      nanos: 474000000
-    }
-    end_time {
-      seconds: 1720269014
-      nanos: 999000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.common.SearchBarKtTest-testSearchBarWithSearchClickTriggersTheOnSearch.txt"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/device-info.pb"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.meminfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/meminfo"
-    }
-  }
-  output_artifact {
-    label {
-      label: "device-info.cpuinfo"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/cpuinfo"
-    }
-  }
-}
-test_result {
-  test_case {
-    test_class: "OnboardingScreenKtTest"
-    test_package: "com.nnaroju.newsapp.presentation.onboarding"
-    test_method: "testOnboardingFlow"
-    start_time {
-      seconds: 1720269015
-      nanos: 731000000
-    }
-    end_time {
-      seconds: 1720269016
-      nanos: 609000000
-    }
-  }
-  test_status: PASSED
-  output_artifact {
-    label {
-      label: "logcat"
-      namespace: "android"
-    }
-    source_path {
-      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.onboarding.OnboardingScreenKtTest-testOnboardingFlow.txt"
+      path: "/Users/nnaroju/AndroidApps/Samples/NewsApp/app/build/outputs/androidTest-results/connected/debug/Pixel_6_API_30(AVD) - 11/logcat-com.nnaroju.newsapp.presentation.details.components.DetailsTopBarKtTest-testSearchIconClick.txt"
     }
   }
   output_artifact {

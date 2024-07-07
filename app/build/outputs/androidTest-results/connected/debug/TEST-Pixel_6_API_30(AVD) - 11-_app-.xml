@@ -1,24 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<testsuite name="com.nnaroju.newsapp.ExampleInstrumentedTest" tests="16" failures="0" errors="0" skipped="0" time="30.309" timestamp="2024-07-06T12:30:18" hostname="localhost">
+<testsuite name="com.nnaroju.newsapp.presentation.details.components.DetailsTopBarKtTest" tests="5" failures="0" errors="0" skipped="0" time="7.401" timestamp="2024-07-07T04:13:07" hostname="localhost">
   <properties>
     <property name="device" value="Pixel_6_API_30(AVD) - 11" />
     <property name="flavor" value="" />
     <property name="project" value=":app" />
   </properties>
-  <testcase name="useAppContext" classname="com.nnaroju.newsapp.ExampleInstrumentedTest" time="0.019" />
-  <testcase name="testArticlesListWithPagingArticlesDisplaysArticleCards" classname="com.nnaroju.newsapp.presentation.common.ArticlesListTest" time="1.243" />
-  <testcase name="testArticlesListWithPagingErrorDisplaysEmptyScreenWithUnknownError" classname="com.nnaroju.newsapp.presentation.common.ArticlesListTest" time="10.706" />
-  <testcase name="testArticlesListWithEmptyPagingArticlesDisplaysEmptyScreen" classname="com.nnaroju.newsapp.presentation.common.ArticlesListTest" time="0.671" />
-  <testcase name="testArticlesListWithEmptyArticlesDisplaysEmptyScreen" classname="com.nnaroju.newsapp.presentation.common.ArticlesListTest" time="0.444" />
-  <testcase name="testArticlesListWithArticlesDisplaysArticleCards" classname="com.nnaroju.newsapp.presentation.common.ArticlesListTest" time="0.357" />
-  <testcase name="testNewsButtonWithTextIsDisplayed" classname="com.nnaroju.newsapp.presentation.common.ButtonKtTest" time="0.338" />
-  <testcase name="testNewsTextButtonWithTextIsDisplayed" classname="com.nnaroju.newsapp.presentation.common.ButtonKtTest" time="0.305" />
-  <testcase name="testEmptyScreenWithConnectErrorDisplaysInternetUnavailableText" classname="com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest" time="0.4" />
-  <testcase name="testEmptyScreenWithUnknownErrorDisplaysUnknownErrorText" classname="com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest" time="0.474" />
-  <testcase name="testEmptyScreenWithSocketTimeOutErrorDisplaysServerUnavailableText" classname="com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest" time="0.394" />
-  <testcase name="testEmptyScreenWithErrorMessageNullDisplaysYouHaveNotSavedText" classname="com.nnaroju.newsapp.presentation.common.EmptyScreenKtTest" time="0.423" />
-  <testcase name="testSearchBarWithEmptyTextPlaceHolderTextIsDisplayed" classname="com.nnaroju.newsapp.presentation.common.SearchBarKtTest" time="0.441" />
-  <testcase name="testSearchBarWithTextIsDisplayed" classname="com.nnaroju.newsapp.presentation.common.SearchBarKtTest" time="0.309" />
-  <testcase name="testSearchBarWithSearchClickTriggersTheOnSearch" classname="com.nnaroju.newsapp.presentation.common.SearchBarKtTest" time="0.524" />
-  <testcase name="testOnboardingFlow" classname="com.nnaroju.newsapp.presentation.onboarding.OnboardingScreenKtTest" time="0.881" />
+  <testcase name="testSaveIconClick" classname="com.nnaroju.newsapp.presentation.details.components.DetailsTopBarKtTest" time="1.021" />
+  <testcase name="testNavigationIconClick" classname="com.nnaroju.newsapp.presentation.details.components.DetailsTopBarKtTest" time="0.431" />
+  <testcase name="testShareIconClick" classname="com.nnaroju.newsapp.presentation.details.components.DetailsTopBarKtTest" time="0.401" />
+  <testcase name="testTopAppBar" classname="com.nnaroju.newsapp.presentation.details.components.DetailsTopBarKtTest" time="0.401" />
+  <testcase name="testSearchIconClick" classname="com.nnaroju.newsapp.presentation.details.components.DetailsTopBarKtTest" time="0.38" />
 </testsuite>

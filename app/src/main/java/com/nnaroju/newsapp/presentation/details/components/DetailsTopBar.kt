@@ -15,6 +15,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import com.nnaroju.newsapp.ui.theme.NewsAppTheme
 
@@ -29,14 +30,17 @@ fun DetailsTopBar(
 ) {
     TopAppBar(
         title = { },
-        modifier = modifier,
+        modifier = modifier.testTag("topAppBar"),
         colors = TopAppBarDefaults.mediumTopAppBarColors(
             containerColor = Color.Transparent,
             actionIconContentColor = MaterialTheme.colorScheme.onBackground,
             navigationIconContentColor = MaterialTheme.colorScheme.onBackground
         ),
         navigationIcon = {
-            IconButton(onClick = onBackClick) {
+            IconButton(
+                modifier = Modifier.testTag("navigationIcon"),
+                onClick = onBackClick
+            ) {
                 Icon(
                     imageVector = Icons.Filled.ArrowBackIosNew,
                     contentDescription = null
@@ -44,19 +48,28 @@ fun DetailsTopBar(
             }
         },
         actions = {
-            IconButton(onClick = onBookmarkClick) {
+            IconButton(
+                modifier = Modifier.testTag("saveIcon"),
+                onClick = onBookmarkClick
+            ) {
                 Icon(
                     imageVector = Icons.Default.Save,
                     contentDescription = null
                 )
             }
-            IconButton(onClick = onShareClick) {
+            IconButton(
+                modifier = Modifier.testTag("shareIcon"),
+                onClick = onShareClick
+            ) {
                 Icon(
                     imageVector = Icons.Default.Share,
                     contentDescription = null
                 )
             }
-            IconButton(onClick = onBrowsingClick) {
+            IconButton(
+                modifier = Modifier.testTag("searchIcon"),
+                onClick = onBrowsingClick
+            ) {
                 Icon(
                     imageVector = Icons.Sharp.Search,
                     contentDescription = null

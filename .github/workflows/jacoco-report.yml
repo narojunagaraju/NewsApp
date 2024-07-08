@@ -37,6 +37,10 @@ jobs:
           api-level: 29
           script: ./gradlew JacocoDebugCodeCoverage
 
+      # Add a step to list the directory contents for debugging
+      - name: List directory contents
+        run: ls -R app/build/reports/jacoco/JacocoDebugCodeCoverage
+
       # generates coverage-report.md and publishes as checkrun
       - name: JaCoCo Code Coverage Report
         id: jacoco_reporter

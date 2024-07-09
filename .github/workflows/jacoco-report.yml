@@ -21,9 +21,9 @@ jobs:
 
       - name: Enable KVM
         run: |
-            echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
-            sudo udevadm control --reload-rules
-            sudo udevadm trigger --name-match=kvm
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v2
@@ -37,37 +37,13 @@ jobs:
           api-level: 29
           script: ./gradlew JacocoDebugCodeCoverage
 
-      # Add a step to list the directory contents for debugging
-      - name: List directory contents
-        run: ls -R app/build/reports/jacoco/JacocoDebugCodeCoverage
-
-      # generates coverage-report.md and publishes as checkrun
-      - name: JaCoCo Code Coverage Report
-        id: jacoco_reporter
-        uses: PavanMudigonda/jacoco-reporter@v5.0
+      - name: Jacoco Report to PR
+        id: jacoco
+        uses: madrapps/jacoco-report@v1.6.1
         with:
-          coverage_results_path: app/build/reports/jacoco/JacocoDebugCodeCoverage/JacocoDebugCodeCoverage.xml
-          coverage_report_name: Coverage
-          coverage_report_title: JaCoCo
-          github_token: ${{ secrets.COVERAGE_TOKEN }}
-          skip_check_run: false
-          minimum_coverage: 10
-          fail_below_threshold: false
-          publish_only_summary: false
-
-      # Publish Coverage Job Summary  # Optional
-      - name: Add Jacocoo report to workflow run summary
-        run: |
-          echo "| Outcome | Value |" >> $GITHUB_STEP_SUMMARY
-          echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
-          echo "| Code Coverage % | ${{ steps.jacoco_reporter.outputs.coverage_percentage }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| :heavy_check_mark: Number of Lines Covered | ${{ steps.jacoco_reporter.outputs.covered_lines }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| :x: Number of Lines Missed | ${{ steps.jacoco_reporter.outputs.missed_lines }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Total Number of Lines | ${{ steps.jacoco_reporter.outputs.total_lines }} |" >> $GITHUB_STEP_SUMMARY
-
-      - name: Upload Code Coverage Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: code-coverage-report-markdown
-          path: app/build/reports/jacoco/JacocoDebugCodeCoverage/coverage-results.md
-          retention-days: 1
+          paths: ${{ github.workspace }}/build/reports/jacoco/testCoverage/testCoverage.xml
+          token: ${{ secrets.COVERAGE_TOKEN }}
+          min-coverage-overall: 10
+          min-coverage-changed-files: 1
+          title: Code Coverage
+          update-comment: true

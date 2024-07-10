@@ -164,5 +164,7 @@ dependencies {
     androidTestImplementation(libs.mockito.android)
     testImplementation(libs.mockito.kotlin)
     testImplementation(libs.mockito.inline)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.androidx.core.testing)
 
 }

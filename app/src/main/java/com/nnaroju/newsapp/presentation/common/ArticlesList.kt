@@ -1,5 +1,6 @@
 package com.nnaroju.newsapp.presentation.common
 
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -45,7 +46,7 @@ fun ArticlesList(
     modifier: Modifier = Modifier
 ) {
     val handlePagingResult = handlePagingResult(articles = articles)
-
+    Log.e("TAG", "ArticlesList: $handlePagingResult" )
     if (handlePagingResult) {
         LazyColumn(
             modifier = modifier,

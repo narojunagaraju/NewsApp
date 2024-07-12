@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.nnaroju.newsapp.domain.usecases.news.SelectArticleUseCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-07T03:31:48" hostname="nnaroju-C02G50AHMD6N" time="0.003">
-  <properties/>
-  <testcase name="test invoke(article) on selectArticleUseCase interacts with dao" classname="com.nnaroju.newsapp.domain.usecases.news.SelectArticleUseCaseTest" time="0.003"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

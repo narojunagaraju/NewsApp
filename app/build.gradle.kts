@@ -66,7 +66,10 @@ val exclusions = listOf(
     "**/R\$*.class",
     "**/BuildConfig.*",
     "**/Manifest*.*",
-    "**/*Test*.*"
+    "**/*Test*.*",
+    "**/com/nnaroju/newsapp/ui/**",
+    "**/hilt_aggregated_deps/**",
+    "**/dagger/hilt/internal/aggregatedroot/codegen/**"
 )
 
 android {

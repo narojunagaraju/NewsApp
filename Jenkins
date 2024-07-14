@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage('Clean Build and Generate Jacoco Debug Report') {
+        stage('Clean Build, and Generate Jacoco Debug Report') {
             steps {
                 bat './gradlew clean'
                 bat './gradlew JacocoDebugCodeCoverage'

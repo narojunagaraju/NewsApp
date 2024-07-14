@@ -15,7 +15,7 @@ sonarqube {
         property("sonar.projectKey", "NewsApp")
         property("sonar.projectName", "NewsApp")
         property("sonar.host.url", "http://localhost:9000")
-        property("sonar.login", "sqa_81641bfe862986f2aea9a6cf79367182d1af626es")
+        property("sonar.token", "sqa_86476df6b368f38ecc291962e8e238398a795ec8")
     }
 }
 

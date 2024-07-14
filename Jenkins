@@ -16,10 +16,10 @@ pipeline {
         stage('Clean Build and Generate Jacoco Debug Report') {
             steps {
                 // Step 2: Run unit tests
-                sh './gradlew clean'
+                bat './gradlew clean'
 
                 // Step 3: Generate Jacoco report
-                sh './gradlew JacocoDebugCodeCoverage'
+                bat './gradlew JacocoDebugCodeCoverage'
             }
         }
 

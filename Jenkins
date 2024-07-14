@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage('Clean Build, and Generate Jacoco Debug Report') {
+        stage('Clean Build and Generate Jacoco Debug Report') {
             steps {
                 bat './gradlew clean assembleDebug'
                 bat './gradlew clean'
@@ -32,10 +32,10 @@ pipeline {
 
     post {
         success {
-            echo 'Pipeline succeeded! ${env.SONAR_TOKEN}'
+            echo "Pipeline succeeded! ${env.SONAR_TOKEN}"
         }
         failure {
-            echo 'Pipeline failed! ${env.SONAR_TOKEN}'
+            echo "Pipeline failed! ${env.SONAR_TOKEN}"
         }
     }
 }

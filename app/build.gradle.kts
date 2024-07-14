@@ -7,6 +7,16 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.parcelize)
     jacoco
+    alias(libs.plugins.sonarqube)
+}
+
+sonarqube {
+    properties {
+        property("sonar.projectKey", "NewsApp")
+        property("sonar.projectName", "NewsApp")
+        property("sonar.host.url", "http://localhost:9000")
+        property("sonar.login", "sqa_81641bfe862986f2aea9a6cf79367182d1af626es")
+    }
 }
 
 android {

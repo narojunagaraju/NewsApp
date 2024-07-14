@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Step 1: Fetch code from GitHub
-                git branch: 'main', url: 'https://github.com/narojunagaraju/NewsApp.git'
+                git branch: 'master', url: 'https://github.com/narojunagaraju/NewsApp.git'
             }
         }
 

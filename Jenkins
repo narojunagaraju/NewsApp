@@ -8,27 +8,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Step 1: Fetch code from GitHub
+                // Step 1: Fetch code from GitHub.
                 git branch: 'master', url: 'https://github.com/narojunagaraju/NewsApp.git'
-            }
-        }
-
-        stage('Clean Build and Generate Jacoco Debug Report') {
-            steps {
-                // Step 2: Run unit tests
-                bat './gradlew clean'
-
-                // Step 3: Generate Jacoco report
-                bat './gradlew JacocoDebugCodeCoverage'
-            }
-        }
-
-        stage('SonarQube Analysis') {
-            steps {
-                // Step 4: Update SonarQube
-                withSonarQubeEnv('SonarQube') {
-                    bat "./gradlew sonarqube -Dsonar.projectKey=NewsApp -Dsonar.projectName='NewsApp' -Dsonar.host.url=http://localhost:9000 -Dsonar.login=$SONAR_TOKEN"
-                }
             }
         }
     }

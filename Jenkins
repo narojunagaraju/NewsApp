@@ -1,12 +1,29 @@
 pipeline {
     agent any
 
+    environment {
+        SONAR_TOKEN = credentials('sonar-token')
+    }
 
     stages {
         stage('Checkout') {
             steps {
-                // Step 1: Fetch code from GitHub.
                 git branch: 'master', url: 'https://github.com/narojunagaraju/NewsApp.git'
+            }
+        }
+
+        stage('Clean Build and Generate Jacoco Debug Report') {
+            steps {
+                bat './gradlew clean'
+                bat './gradlew JacocoDebugCodeCoverage'
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('SonarQube') {
+                    bat "./gradlew sonarqube -Dsonar.projectKey=NewsApp -Dsonar.projectName='NewsApp' -Dsonar.host.url=http://localhost:9000 -Dsonar.login=%SONAR_TOKEN%"
+                }
             }
         }
     }

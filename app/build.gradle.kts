@@ -10,12 +10,14 @@ plugins {
     alias(libs.plugins.sonarqube)
 }
 
+val sonarToken: String? = System.getenv("sonar-token")
+
 sonarqube {
     properties {
         property("sonar.projectKey", "NewsApp")
         property("sonar.projectName", "NewsApp")
         property("sonar.host.url", "http://localhost:9000")
-        property("sonar.token", "sqa_86476df6b368f38ecc291962e8e238398a795ec8")
+        sonarToken?.let { property("sonar.login", it) } ?: run { println("token is null") }
     }
 }
 

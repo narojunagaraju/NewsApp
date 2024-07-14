@@ -69,7 +69,9 @@ val exclusions = listOf(
     "**/*Test*.*",
     "**/com/nnaroju/newsapp/ui/**",
     "**/hilt_aggregated_deps/**",
-    "**/dagger/hilt/internal/aggregatedroot/codegen/**"
+    "**/dagger/hilt/internal/aggregatedroot/codegen/**",
+    "**/*_HiltModules*",
+    "**/*_HiltModules_KeyModule_ProvideFactory*"
 )
 
 android {

@@ -19,7 +19,7 @@ pipeline {
                 bat './gradlew clean'
 
                 // Step 3: Generate Jacoco report
-                bat './gradlew JacocoDebugCodeCoverage'
+                sh './gradlew JacocoDebugCodeCoverage'
             }
         }
 

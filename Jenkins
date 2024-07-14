@@ -27,7 +27,7 @@ pipeline {
             steps {
                 // Step 4: Update SonarQube
                 withSonarQubeEnv('SonarQube') {
-                    sh "./gradlew sonarqube -Dsonar.projectKey=NewsApp -Dsonar.projectName='NewsApp' -Dsonar.host.url=http://localhost:9000 -Dsonar.login=$SONAR_TOKEN"
+                    bat "./gradlew sonarqube -Dsonar.projectKey=NewsApp -Dsonar.projectName='NewsApp' -Dsonar.host.url=http://localhost:9000 -Dsonar.login=$SONAR_TOKEN"
                 }
             }
         }

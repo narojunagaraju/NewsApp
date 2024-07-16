@@ -6,6 +6,12 @@ pipeline {
         ANDROID_HOME = 'C:/Users/King/AppData/Local/Android/Sdk'
     }
 
+     triggers {
+            githubPullRequest {
+                useGitHubHooks()
+            }
+        }
+
     stages {
         stage('Checkout') {
             steps {

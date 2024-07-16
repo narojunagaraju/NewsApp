@@ -6,6 +6,12 @@ pipeline {
         ANDROID_HOME = 'C:/Users/King/AppData/Local/Android/Sdk'
     }
 
+     triggers {
+            githubPullRequest {
+                useGitHubHooks()
+            }
+        }
+
     stages {
         stage('Checkout') {
             steps {
@@ -24,7 +30,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    bat "./gradlew sonarqube -Dsonar.projectKey=NewsApp -Dsonar.projectName='NewsApp' -Dsonar.host.url=http://localhost:9000 -Dsonar.login=%SONAR_TOKEN% -Dsonar.coverage.jacoco.xmlReportPaths=app/build/reports/jacoco/JacocoDebugCodeCoverage/JacocoDebugCodeCoverage.xml"
+                    bat "./gradlew sonarqube -Dsonar.projectKey=NewsApp -Dsonar.projectName='NewsApp' -Dsonar.host.url=http://localhost:9000 -Dsonar.login=%SONAR_TOKEN% -Dsonar.coverage.jacoco.xmlReportPaths=C:/Users/King/NewsApp/app/build/reports/jacoco/JacocoDebugCodeCoverage/JacocoDebugCodeCoverage.xml"
                 }
             }
         }

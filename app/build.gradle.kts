@@ -17,7 +17,7 @@ sonarqube {
         property("sonar.projectKey", "NewsApp")
         property("sonar.projectName", "NewsApp")
         property("sonar.host.url", "http://localhost:9000")
-        sonarToken?.let { property("sonar.login", it) } ?: run { println("token is null") }
+        sonarToken?.let { property("sonar.token", it) } ?: run { println("token is null") }
     }
 }
 

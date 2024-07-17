@@ -4,22 +4,7 @@ pipeline {
     environment {
         SONAR_TOKEN = credentials('sonar-token')
         ANDROID_HOME = 'C:/Users/King/AppData/Local/Android/Sdk'
-        WEBHOOK_TOKEN = credentials('webhook-token')
     }
-
-    triggers {
-            GenericTrigger(
-                genericVariables: [
-                    [key: 'action', value: '$.action'],
-                    [key: 'pull_request', value: '$.pull_request']
-                ],
-                causeString: 'Triggered by GitHub pull request',
-                token: '${WEBHOOK_TOKEN}',
-                printContributedVariables: true,
-                printPostContent: true,
-                silentResponse: false
-            )
-        }
 
     stages {
         stage('Checkout') {

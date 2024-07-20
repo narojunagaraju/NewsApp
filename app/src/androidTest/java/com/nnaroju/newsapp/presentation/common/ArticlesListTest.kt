@@ -1,5 +1,6 @@
 package com.nnaroju.newsapp.presentation.common
 
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
@@ -22,7 +23,7 @@ class ArticlesListTest {
     @Test
     fun testArticlesListWithEmptyArticlesDisplaysEmptyScreen() {
         composeRule.setContent {
-            ArticlesList(articles = emptyList(), onClick = {})
+            ArticlesList(articles = emptyList(), onClick = {}, modifier = Modifier)
         }
 
         composeRule.onNodeWithText("You haven't saved news so far!").assertIsDisplayed()
@@ -49,7 +50,7 @@ class ArticlesListTest {
 
     @Test
     fun testArticlesListWithPagingArticlesDisplaysArticleCards() {
-        val articles = listOf(
+        val articlesList = listOf(
             Article(
                 "Author",
                 "content",
@@ -60,7 +61,7 @@ class ArticlesListTest {
             )
         )
         composeRule.setContent {
-            val articles: LazyPagingItems<Article> = rememberLazyPagingItems(articles, false)
+            val articles: LazyPagingItems<Article> = rememberLazyPagingItems(articlesList, false)
             ArticlesList(articles = articles, onClick = {})
         }
 
@@ -69,9 +70,9 @@ class ArticlesListTest {
 
     @Test
     fun testArticlesListWithEmptyPagingArticlesDisplaysEmptyScreen() {
-        val articles = emptyList<Article>()
+        val emptyArticles = emptyList<Article>()
         composeRule.setContent {
-            val articles: LazyPagingItems<Article> = rememberLazyPagingItems(articles, false)
+            val articles: LazyPagingItems<Article> = rememberLazyPagingItems(emptyArticles, false)
             ArticlesList(articles = articles, onClick = {})
         }
 
@@ -80,12 +81,11 @@ class ArticlesListTest {
 
     @Test
     fun testArticlesListWithPagingErrorDisplaysEmptyScreenWithUnknownError() {
-        val articles = emptyList<Article>()
+        val emptyArticles = emptyList<Article>()
         composeRule.setContent {
-            val articles: LazyPagingItems<Article> = rememberLazyPagingItems(articles, true)
+            val articles: LazyPagingItems<Article> = rememberLazyPagingItems(emptyArticles, true)
             ArticlesList(articles = articles, onClick = {})
         }
-        Thread.sleep(10*1000)
         composeRule.onNodeWithText("Unknown error").assertIsDisplayed()
     }
 

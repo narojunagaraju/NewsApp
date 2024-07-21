@@ -19,6 +19,7 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -70,7 +71,8 @@ fun HomeScreen(
             onSearch = { },
             onClick = {
                 navigateToSearch()
-            }
+            },
+            modifier = Modifier.testTag("searchBar")
         )
 
         Spacer(modifier = Modifier.height(24.dp))
@@ -79,14 +81,17 @@ fun HomeScreen(
             text = title, modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 24.dp)
-                .basicMarquee(),
+                .basicMarquee()
+                .testTag("title"),
             fontSize = 12.sp,
             color = MaterialTheme.colorScheme.onBackground
         )
         Spacer(modifier = Modifier.height(24.dp))
 
         ArticlesList(
-            modifier = Modifier.padding(horizontal = 24.dp),
+            modifier = Modifier
+                .padding(horizontal = 24.dp)
+                .testTag("ArticlesList"),
             articles = articles, onClick = {
                 navigateToDetails(it)
             }

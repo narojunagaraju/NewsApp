@@ -2,7 +2,7 @@ package com.nnaroju.newsapp.domain.usecases.news
 
 import com.nnaroju.newsapp.data.local.NewsDao
 import com.nnaroju.newsapp.domain.model.Article
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -28,7 +28,7 @@ class DeleteArticleUseCaseTest {
     }
 
     @Test
-    fun `test invoke(article) on deleteUseCase interacts with dao`() = runBlocking {
+    fun `test invoke(article) on deleteUseCase interacts with dao`() = runTest {
         //Arrange
         val article = Mockito.mock(Article::class.java)
 

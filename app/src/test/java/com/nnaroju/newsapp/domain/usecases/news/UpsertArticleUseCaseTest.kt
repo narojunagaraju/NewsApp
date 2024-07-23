@@ -2,7 +2,7 @@ package com.nnaroju.newsapp.domain.usecases.news
 
 import com.nnaroju.newsapp.data.local.NewsDao
 import com.nnaroju.newsapp.domain.model.Article
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -29,14 +29,12 @@ class UpsertArticleUseCaseTest {
     }
 
     @Test
-    fun `test invoke(article) on UpsertArticleUseCase interacts with dao`() {
-        runBlocking {
-            val article = Mockito.mock(Article::class.java)
-            //Act
-            upsertArticleUseCase.invoke(article)
+    fun `test invoke(article) on UpsertArticleUseCase interacts with dao`() = runTest {
+        val article = Mockito.mock(Article::class.java)
+        //Act
+        upsertArticleUseCase.invoke(article)
 
-            //Assert
-            verify(newsDao).upsert(any())
-        }
+        //Assert
+        verify(newsDao).upsert(any())
     }
 }

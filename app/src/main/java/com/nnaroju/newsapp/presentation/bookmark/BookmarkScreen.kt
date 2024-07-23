@@ -8,10 +8,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import com.nnaroju.newsapp.domain.model.Article
 import com.nnaroju.newsapp.presentation.common.ArticlesList
-import com.nnaroju.newsapp.presentation.navgraph.Route
 
 @Composable
 fun BookmarkScreen(
@@ -26,8 +26,12 @@ fun BookmarkScreen(
             color = MaterialTheme.colorScheme.onBackground
         )
         Spacer(modifier = Modifier.height(24.dp))
-        ArticlesList(articles = state.articles, onClick = {
-            navigateToDetails(it)
-        })
+        ArticlesList(
+            articles = state.articles,
+            modifier = Modifier.testTag("articlesList"),
+            onClick = {
+                navigateToDetails(it)
+            }
+        )
     }
 }

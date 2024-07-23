@@ -1,7 +1,7 @@
 package com.nnaroju.newsapp.domain.usecases.news
 
 import com.nnaroju.newsapp.domain.respository.NewsRepository
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -26,16 +26,14 @@ class SearchNewsUseCaseTest {
     }
 
     @Test
-    fun `test invoke on SearchNewsUseCase interacts with newsRepository`() {
-        runBlocking {
-            //Arrange
-            val list = emptyList<String>()
+    fun `test invoke on SearchNewsUseCase interacts with newsRepository`() = runTest {
+        //Arrange
+        val list = emptyList<String>()
 
-            //Act
-            searchNewsUseCase.invoke("", list)
+        //Act
+        searchNewsUseCase.invoke("", list)
 
-            //Assert
-            verify(newsRepository).searchNews(anyString(), any())
-        }
+        //Assert
+        verify(newsRepository).searchNews(anyString(), any())
     }
 }

@@ -25,6 +25,10 @@ android {
     namespace = "com.nnaroju.newsapp"
     compileSdk = 34
 
+    testOptions {
+        unitTests.isIncludeAndroidResources = true
+    }
+
     defaultConfig {
         applicationId = "com.nnaroju.newsapp"
         minSdk = 24
@@ -32,7 +36,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.nnaroju.newsapp.CustomTestRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -133,6 +137,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.junit.ktx)
+    implementation(libs.androidx.runner)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -154,6 +160,10 @@ dependencies {
     implementation(libs.hilt.compose)
     ksp(libs.hilt.android.compiler)
     implementation(libs.hilt.android.testing)
+    kspTest(libs.hilt.android.compiler)
+    kspAndroidTest(libs.hilt.android.compiler)
+    testImplementation(libs.hilt.android.testing)
+    androidTestImplementation(libs.hilt.android.testing)
 
     //navigation
     implementation(libs.compose.navigation)

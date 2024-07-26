@@ -17,6 +17,7 @@ hilt-compose = "1.0.0"
 ksp-version = "1.9.0-1.0.13"
 monitor = "1.6.1"
 navigation = "2.7.4"
+pagingCommonVersion = "3.3.1"
 retrofit = "2.11.0"
 coil = "2.6.0"
 paging = "3.3.0"
@@ -35,6 +36,7 @@ androidx-core-testing = { module = "androidx.arch.core:core-testing", version.re
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
 androidx-monitor = { module = "androidx.test:monitor", version.ref = "monitor" }
 androidx-paging-common = { module = "androidx.paging:paging-common", version.ref = "paging" }
+androidx-paging-common-v301 = { module = "androidx.paging:paging-common", version.ref = "pagingCommonVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
